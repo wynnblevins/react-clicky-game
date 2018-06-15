@@ -2,7 +2,7 @@
   "name": "clicky-game",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://wynnblevins.github.io/clicky-game",
+  "homepage": "https://wynnblevins.github.io/react-clicky-game",
   "dependencies": {
     "@material-ui/core": "^1.2.1",
     "react": "^16.4.0",
