@@ -30,7 +30,8 @@ class GameBoard extends Component {
     this.state = {
       guitars: this.props.guitars,
       showLoser: false,
-      showWinner: false
+      showWinner: false,
+      score: 0
     }
   }
 
@@ -46,6 +47,10 @@ class GameBoard extends Component {
 
     this.setState({guitars: newGuitarsArr});
   }  
+
+  incrementScore = () => {
+    this.state.score++;
+  }
 
   checkIfGameWon = () => {
     for (let i = 0; i < this.state.guitars.length; i++) {
@@ -68,7 +73,9 @@ class GameBoard extends Component {
         }
         else { // if it does set has been clicked to true
           guitar.hasBeenClicked = true;
-          
+
+          // increment the score board
+          this.incrementScore()
         }
       }
 
@@ -104,6 +111,7 @@ class GameBoard extends Component {
     return (
       <div>
         <Typography variant="subheading" gutterBottom>
+          <h2>Score: {this.state.score}</h2>
         </Typography>
         <Grid container spacing={16}>
           {this.props.guitars.map((guitar, i) => (
