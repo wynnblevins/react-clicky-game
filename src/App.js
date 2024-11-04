@@ -25,6 +25,8 @@ class App extends Component {
     
     return (
       <div className="App">
+        <h1>How to play:</h1>
+        <h2>Try to click each guitar only once.  If you accidentally click the same guitar twice, you lose.  Good luck!</h2>
         <GuitarGameBoard guitars={guitars}></GuitarGameBoard>
       </div>
     );
